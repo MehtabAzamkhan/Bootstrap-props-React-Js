@@ -25,7 +25,7 @@ export default function About() {
   };
 
   return (
-    <div classNameName="container" style={myStyle}>
+    <div className="container" style={myStyle}>
       <h1>About Us</h1>
       <div className="accordion accordion-flush" id="accordionFlushExample">
         <div className="accordion-item">
@@ -111,7 +111,7 @@ export default function About() {
           </div>
         </div>
       </div>
-      <div classNameName="conatiner my-3">
+      <div className="conatiner my-3">
         <button
           type="button"
           className="btn btn-primary  mx-3"

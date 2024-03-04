@@ -25,13 +25,22 @@ export default function Form(props) {
 
   return (
     <>
-      <div className="container">
+      <div
+        className="container"
+        style={{
+          color: props.mode === "dark" ? "white" : "#042743",
+        }}
+      >
         <h1>{props.heading}</h1>
         <div className="mb-3">
           <textarea
             className="form-control"
             value={text}
             onChange={dcase}
+            style={{
+              backgroundColor: props.mode === "dark" ? "grey" : "white",
+              color: props.mode === "dark" ? "white" : "#042743",
+            }}
             id="mybox"
             rows="12"
           ></textarea>
@@ -47,7 +56,12 @@ export default function Form(props) {
         </button>
       </div>
 
-      <div className="container my-2">
+      <div
+        className="container my-2"
+        style={{
+          color: props.mode === "dark" ? "white" : "#042743",
+        }}
+      >
         <h2>your text summary</h2>
         <p>
           {text.split(" ").length} worlds , {text.length} characters
