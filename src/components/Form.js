@@ -5,12 +5,14 @@ export default function Form(props) {
     console.log("button clicked");
     let newtext = text.toUpperCase();
     setText(newtext);
+    props.showAlert("Converted to UpperCase", "success");
   };
 
   const locase = () => {
     console.log("button clicked");
     let newtext = text.toLowerCase();
     setText(newtext);
+    props.showAlert("Converted to Lower Case", "success");
   };
 
   const dcase = (e) => {
@@ -19,6 +21,7 @@ export default function Form(props) {
 
   const del = (e) => {
     setText("");
+    props.showAlert("Text Deleted", "success");
   };
 
   const [text, setText] = useState("Enter Text Here");
